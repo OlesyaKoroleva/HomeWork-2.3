@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var forgotUserNameTF: UIButton!
-    @IBOutlet var forgotPasswordTF: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTF.delegate = self

@@ -78,8 +78,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login Screen" id="qBf-QZ-jzU"/>
                     <connections>
-                        <outlet property="forgotPasswordTF" destination="fid-Df-kYu" id="znZ-I2-ntC"/>
-                        <outlet property="forgotUserNameTF" destination="B37-mU-j6D" id="E2R-Cw-HVK"/>
                         <outlet property="passwordTF" destination="G1K-0S-txX" id="uCw-50-lfq"/>
                         <outlet property="userNameTF" destination="LH3-Yh-fDQ" id="U0o-op-xpz"/>
                         <segue destination="cxf-8d-hfP" kind="presentation" identifier="detailUser" id="WSU-fC-xor"/>
@@ -125,7 +123,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="7eX-LT-HP2"/>
                     <connections>
-                        <outlet property="logOutButton" destination="gAQ-Y7-QRq" id="cOV-1q-jFA"/>
                         <outlet property="userNameLabel" destination="tYn-dX-peX" id="9JT-s8-SCG"/>
                         <segue destination="NHI-u4-u16" kind="unwind" identifier="GoBack" unwindAction="unwindFor:" id="vVw-Z0-Jlh"/>
                     </connections>

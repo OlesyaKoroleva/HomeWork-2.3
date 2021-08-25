@@ -10,7 +10,6 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var logOutButton: UIButton!
     
     var userName: String!
     
