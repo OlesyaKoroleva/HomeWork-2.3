@@ -11,21 +11,11 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var userNameLabel: UILabel!
     
-    var userName: String!
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "Welcome, \(userName ?? "")! \n🤚🏾"
-    }
-    
-    @IBAction func logOutButtonPressed() {
-        dismiss(animated: true)
-    }
-    
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let loginVC = segue.source as?
-                ViewController else { return }
-        loginVC.userNameTF.text = nil
-        loginVC.passwordTF.text = nil
+        userNameLabel.text = "Welcome, \(userName)! \n🤚🏾"
     }
 }
+
