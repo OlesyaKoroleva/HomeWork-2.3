@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTF.delegate = self
@@ -26,12 +28,14 @@ class ViewController: UIViewController {
     
     @IBAction func loginButtonPressed() {
         if let name = userNameTF.text,
-           let password = passwordTF.text, name == "User", password == "Password" {
+           let password = passwordTF.text,
+           name == "User",
+           password == "Password" {
             performSegue(withIdentifier: "detailUser", sender: self)
-            
-            
         } else {
-            showAlert(with: "Invalid Login or Password", and: "Please, enter correct Login and Password")
+            showAlert(
+                with: "Invalid Login or Password",
+                and: "Please, enter correct Login and Password")
         }
     }
     
@@ -47,23 +51,28 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    
-    
-    
 }
 
 // MARK: - Privite Methods
-
 extension ViewController {
     private func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default) { _ in
             self.passwordTF.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
+
+// MARK: - UITextFieldDelegate
+
+
 
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
