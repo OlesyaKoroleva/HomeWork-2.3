@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  HomeWork 2.3
+//  HomeWork 2.4
 //
 //  Created by Olesya Koroleva on 24.08.2021.
 //
